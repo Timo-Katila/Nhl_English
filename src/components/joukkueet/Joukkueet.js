@@ -33,7 +33,7 @@ const Joukkueet = () => {
         
         
         <Card key={joukkue.id} className="mt-3 mr-3 mx-auto" style={{ width: '18rem'}}>
-        <Card.Img variant="top" src={`/kuvat/${joukkue.id}.png`} alt={joukkue.id} />
+        <Card.Img variant="top" src={`/pictures/${joukkue.id}.png`} alt={joukkue.id} />
         <Card.Body>
             <Card.Title>{joukkue.name}</Card.Title>
             <Card.Text>
