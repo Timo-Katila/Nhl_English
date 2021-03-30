@@ -9,12 +9,12 @@ import {
 //Compomemt imports
 import Container from 'react-bootstrap/Container/'
 import Navigation from './components/Navigation';
-import Etusivu from './components/Etusivu';
+import Homepage from './components/Homepage';
 import LeagueTable from './components/LeagueTable/LeagueTable';
 import TeamStats from './components/TeamStats/TeamStats';
-import Joukkueet from './components/joukkueet/Joukkueet';
-import Pelaajat from './components/joukkueet/Pelaajat';
-import PelaajaData from './components/joukkueet/PelaajaData';
+import Teams from './components/Teams/Teams';
+import Players from './components/Teams/Players';
+import PlayerData from './components/Teams/PlayerData';
 
 
 
@@ -29,12 +29,12 @@ const App = () =>  {
         <Navigation/>
         
         <Switch>
-          <Route exact path="/" component={Etusivu}/>
+          <Route exact path="/" component={Homepage}/>
           <Route exact path="/leaguetable" component={LeagueTable}/>
-          <Route exact path="/joukkueet" component={Joukkueet}/>
-          <Route path="/pelaajadata/:id" component={PelaajaData}/>
+          <Route exact path="/teams" component={Teams}/>
+          <Route path="/playerdata/:id" component={PlayerData}/>
           <Route path="/Leaguetable/:id" component={TeamStats}/>
-          <Route path="/joukkueet/:id" component={Pelaajat}/>
+          <Route path="/teams/:id" component={Players}/>
           
          
             
