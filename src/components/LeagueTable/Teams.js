@@ -34,15 +34,15 @@ const Teams = ({teams, division}) => {
                         <th scope="col" colSpan="12">{division}</th>
                     </tr>
                     <tr className="thead-light">
-                        <th>Joukkue</th>
-                        <th>O</th>
-                        <th>V</th>
-                        <th>T</th>
-                        <th>H</th>
-                        <th>TM</th>
-                        <th>PM</th>
-                        <th>P</th>
-                        <th>P/O</th>
+                        <th>Team</th>
+                        <th>GP</th>
+                        <th>W</th>
+                        <th>OT</th>
+                        <th>L</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>PTS</th>
+                        <th>P%</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -48,7 +48,7 @@ const LeagueTable = () => {
                   <Alert variant="danger" className="mt-4"> {divisions.virhe} </Alert>
                 :
                     [<React.Fragment key="leagueTable">
-                        <Col className="text-center mt-3"><h2>League table</h2></Col>
+                        <Col className="text-center mt-3"><h2>Standings</h2></Col>
                         <Teams division={"Discover Central"} teams={divisions.central} />
                         <Teams division={"MassMutual East"} teams={divisions.east}/>
                         <Teams division={"Honda West"} teams={divisions.west} />
@@ -58,19 +58,19 @@ const LeagueTable = () => {
                        <Table responsive className="mt-4">
                            <thead className="thead-dark">
                                <tr>
-                                   <th colSpan="12">Lyhenteet:</th>
+                                   <th colSpan="12">Abbreviations:</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                   <th>O = Ottelut</th>
-                                   <th>V = Voitot</th>
-                                   <th>T = Tasapelit</th>
-                                   <th>H = Häviöt</th>
-                                   <th>TM = Tehdyt maalit</th>
-                                   <th>OM = Päästetyt maalit</th>
-                                   <th>P = Pisteet</th>
-                                   <th>P/O = Piste %</th>
+                                   <th>GP = Games Playd</th>
+                                   <th>W = Wins</th>
+                                   <th>T = Overtime</th>
+                                   <th>H = Losses</th>
+                                   <th>GF = Goals For </th>
+                                   <th>GA = Goals against</th>
+                                   <th>P = Points</th>
+                                   <th>P% = Point Percentage</th>
                                </tr>
                            </tbody>
                        </Table>

@@ -25,7 +25,7 @@ const Navigation = () => {
                             <b>Home</b>
                         </NavLink>
                         <NavLink className="nav-link" to="/leaguetable">
-                            <b>League table  </b>
+                            <b>Standings  </b>
                         </NavLink>
                         <NavLink className="nav-link" to="/joukkueet">
                             <b>Teams</b>
