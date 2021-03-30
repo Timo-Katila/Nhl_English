@@ -29,28 +29,28 @@ const Teams = () => {
        
     },[apiUrl]);
   
-    const renderedData = teams.map(team => 
-        
-        
-        <Card key={team.id} className="mt-3 mr-3 mx-auto" style={{ width: '18rem'}}>
-        <Card.Img variant="top" src={`/pictures/${team.id}.png`} alt={team.id} />
-        <Card.Body>
-            <Card.Title>{team.name}</Card.Title>
-            <Card.Text>
+    const renderedData = teams.map((team) => { 
+       
+        return (
+            <Card key={team.id} className="mt-3 mr-3 mx-auto" style={{ width: '18rem'}}>
+                <Card.Img variant="top" src={`/pictures/${team.id}.png`} alt={team.id} />
+                <Card.Body>
+                    <Card.Title>{team.name}</Card.Title>
+                    <Card.Text>
 
-                <NavLink className="navlink" to={`/teams/${team.id}`}>
-                    <b>Roster</b>
-                </NavLink>
+                        <NavLink className="navlink" to={`/teams/${team.id}`}>
+                            <b>Roster</b>
+                        </NavLink>
 
-                <NavLink className="nav-link" to={`/leaguetable/${team.id}`}>
-                    <b>Team stats</b> 
-                </NavLink>
-            </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-        </Card.Body>
-      </Card>
-    
-    )
+                        <NavLink className="nav-link" to={`/leaguetable/${team.id}`}>
+                            <b>Team stats</b> 
+                        </NavLink>
+                    </Card.Text>
+                    <Button variant="primary">Go somewhere</Button>
+                </Card.Body>
+            </Card>
+        );
+    });
       
     return (
         
@@ -60,7 +60,7 @@ const Teams = () => {
                 {renderedData}
             </Row>
         </React.Fragment>
-     )
+     );
     };
 
 export default Teams;

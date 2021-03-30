@@ -16,9 +16,6 @@ import Teams from './components/Teams/Teams';
 import Players from './components/Teams/Players';
 import PlayerData from './components/Teams/PlayerData';
 
-
-
-//Axios, router asennettu
 const App = () =>  {
 
   return (
@@ -35,17 +32,10 @@ const App = () =>  {
           <Route path="/playerdata/:id" component={PlayerData}/>
           <Route path="/Leaguetable/:id" component={TeamStats}/>
           <Route path="/teams/:id" component={Players}/>
-          
-         
-            
-        
         </Switch>
       </Router>
-
-      
      
     </Container>
-    
   );
 }
 

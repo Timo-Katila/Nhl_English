@@ -3,7 +3,6 @@ import NhlApi from '../api/NhlApi';
 import {useParams} from 'react-router-dom';
 import PlayerList from './PlayerList';
 
-
 const Players = () => {
 
     const {id}   = useParams();
@@ -58,7 +57,6 @@ const Players = () => {
    
     return(
         <React.Fragment>
-     
             {
                 loading
                 ? 

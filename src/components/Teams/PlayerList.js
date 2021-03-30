@@ -1,5 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom'
+
+//Bootstrap imports
 import Col from 'react-bootstrap/Col'
 import Table from 'react-bootstrap/Table';
 
@@ -14,7 +16,7 @@ const PlayerList = ({ title,  position }) => {
                 </td>
             </tr>
         );
-        });
+    });
 
     return(
      
@@ -32,5 +34,4 @@ const PlayerList = ({ title,  position }) => {
         </Col>
     )
 };
-
 export default PlayerList;

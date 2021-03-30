@@ -2,10 +2,9 @@ import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import NhlApi from '../api/NhlApi';
 
+//Bootstrap imports
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-
-
 
 const PlayerData = () => {
     const {id} = useParams()
@@ -27,8 +26,6 @@ const PlayerData = () => {
             catch (err) {
                 console.log(err);
             }
-
-
         };
 
         searchData();
@@ -41,7 +38,6 @@ const PlayerData = () => {
         {
             loading ?
             <div>Loading...</div>
-          
         :
         <Col className="text-center">
         <Card key={playerdata.id} className="mt-3 mr-3 mx-auto" style={{ width: '18rem'}}>
@@ -49,20 +45,11 @@ const PlayerData = () => {
             <Card.Body>
                 <Card.Title> {playerdata.fullName}</Card.Title>
             </Card.Body>
-
-
-
-
         </Card>
         </Col>
         }
-        
         </React.Fragment>
-        
-             
-        
     ) 
     
 };
-
 export default PlayerData;
