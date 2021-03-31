@@ -5,6 +5,7 @@ import NhlApi from '../api/NhlApi';
 //Bootstrap imports
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import Table from 'react-bootstrap/Table';
 
 const PlayerData = () => {
     const {id} = useParams()
@@ -41,10 +42,63 @@ const PlayerData = () => {
         :
         <Col className="text-center">
         <Card key={playerdata.id} className="mt-3 mr-3 mx-auto" style={{ width: '18rem'}}>
-        <Card.Img variant="top" src={`/pictures/${playerdata.primaryPosition.name}.png`} alt={playerdata.primaryPosition.name} />
-            <Card.Body>
-                <Card.Title> {playerdata.fullName}</Card.Title>
-            </Card.Body>
+        <Card.Img variant="top" src={`/pictures/${playerdata.primaryPosition.abbreviation}.png`} alt={playerdata.primaryPosition.name} />
+                        
+            <Table>
+                <thead className="thead-dark">
+                    <tr>
+                        <th>#{playerdata.primaryNumber} {playerdata.fullName}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{playerdata.primaryPosition.name}</td>
+                    </tr>
+                </tbody>
+
+                <thead className="thead-light">
+                    <tr>
+                        <th>Birthdate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{playerdata.birthDate} ({playerdata.currentAge} years)</td>
+                    </tr>
+                </tbody>
+
+                <thead thead className="thead-light">
+                    <tr>
+                        <th>BirthCountry</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{playerdata.birthCountry}, {playerdata.birthCity}</td>
+                    </tr>
+                </tbody>
+                <thead className="thead-light">
+                    <tr>
+                        <th>height</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{playerdata.height}</td>
+                    </tr>
+                </tbody>
+                <thead className="thead-light">
+                    <tr>
+                        <th>Catches</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{playerdata.shootsCatches}</td>
+                    </tr>
+                </tbody>
+            </Table>
+           
         </Card>
         </Col>
         }
